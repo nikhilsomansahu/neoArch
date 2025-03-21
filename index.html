@@ -428,10 +428,40 @@
             color: #aaa;
         }
         
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #333;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
             .navbar {
                 padding: 1rem 5%;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+
+            .nav-links a {
+                padding: 0.5rem 5%;
             }
             
             .hero h1 {
@@ -471,6 +501,7 @@
     <header>
         <nav class="navbar">
             <a href="#" class="logo">Neo<span>Archons</span></a>
+            <button class="mobile-menu-btn">☰</button>
             <div class="nav-links">
                 <a href="#projects">Projects</a>
                 <a href="#about">About</a>
